@@ -1,0 +1,623 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My API",
+        "description": "This Is API Documentation for My Application",
+        "termsOfService": "https://uas_pemweb.test//terms",
+        "contact": {
+            "name": "API Support",
+            "email": "support@example.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://uas_pemweb.test/",
+            "description": "Local API Server"
+        }
+    ],
+    "paths": {
+        "/api/scholarships": {
+            "get": {
+                "tags": [
+                    "Scholarships"
+                ],
+                "summary": "Ambil semua beasiswa",
+                "operationId": "0ee5b3990cc5093347f3a22a8b655ef7",
+                "responses": {
+                    "200": {
+                        "description": "Berhasil"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Scholarships"
+                ],
+                "summary": "Simpan beasiswa baru",
+                "operationId": "5264958941033b303a3899a554b81c21",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "provider": {
+                                        "type": "string"
+                                    },
+                                    "start_date": {
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "end_date": {
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "is_active": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Beasiswa disimpan"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/scholarships/{id}": {
+            "get": {
+                "tags": [
+                    "Scholarships"
+                ],
+                "summary": "Ambil detail beasiswa",
+                "operationId": "c9e1edea62c06b736dd146fc641ef730",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Berhasil"
+                    },
+                    "404": {
+                        "description": "Tidak ditemukan"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Scholarships"
+                ],
+                "summary": "Update beasiswa",
+                "operationId": "7b6d442d68145339fecf538f2657eb30",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "provider": {
+                                        "type": "string"
+                                    },
+                                    "start_date": {
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "end_date": {
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "is_active": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Berhasil diupdate"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Scholarships"
+                ],
+                "summary": "Hapus beasiswa",
+                "operationId": "3281ceed0af7363b2bd804cfab8d0244",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Berhasil dihapus"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/students": {
+            "get": {
+                "tags": [
+                    "Students"
+                ],
+                "summary": "Ambil semua data mahasiswa",
+                "operationId": "75378cfd9c3d128e0846de3d32b101ec",
+                "responses": {
+                    "200": {
+                        "description": "Berhasil"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Students"
+                ],
+                "summary": "Tambah mahasiswa baru",
+                "operationId": "5e69d562cd0a6141ac0ffdd5a921d62b",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "email",
+                                    "nim"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Budi"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "budi@mail.com"
+                                    },
+                                    "nim": {
+                                        "type": "string",
+                                        "example": "123456789"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Mahasiswa disimpan"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/students/{id}": {
+            "get": {
+                "tags": [
+                    "Students"
+                ],
+                "summary": "Lihat detail mahasiswa berdasarkan ID",
+                "operationId": "00eebadc92fc1451e63b944dc236ce5e",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Berhasil"
+                    },
+                    "404": {
+                        "description": "Tidak ditemukan"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Students"
+                ],
+                "summary": "Update data mahasiswa",
+                "operationId": "ab4663f1b3d03e5867d9dce3e8fa14a3",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Nama Baru"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "emailbaru@example.com"
+                                    },
+                                    "nim": {
+                                        "type": "string",
+                                        "example": "987654321"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Data diperbarui"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Students"
+                ],
+                "summary": "Hapus mahasiswa",
+                "operationId": "ae8784bb4ca4b3b3614a7366dc0f5138",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Berhasil dihapus"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/student-scholarships": {
+            "get": {
+                "tags": [
+                    "StudentScholarships"
+                ],
+                "summary": "Ambil semua data relasi mahasiswa-beasiswa",
+                "operationId": "c258ed95faa1e4e8989aee4068f81c34",
+                "responses": {
+                    "200": {
+                        "description": "Berhasil"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "StudentScholarships"
+                ],
+                "summary": "Berikan beasiswa ke mahasiswa",
+                "operationId": "b9ba9f85b38ebecc5700e7bda47f8e37",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "student_id",
+                                    "scholarship_id"
+                                ],
+                                "properties": {
+                                    "student_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "scholarship_id": {
+                                        "type": "integer",
+                                        "example": 2
+                                    },
+                                    "awarded_at": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2025-07-21"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Beasiswa diberikan"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/student-scholarships/{id}": {
+            "delete": {
+                "tags": [
+                    "StudentScholarships"
+                ],
+                "summary": "Hapus relasi mahasiswa-beasiswa",
+                "operationId": "eb6f0b8605ee249aebecb73589f74353",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Relasi dihapus"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Scholarship": {
+                "title": "Scholarship",
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Beasiswa Prestasi"
+                    },
+                    "description": {
+                        "type": "string",
+                        "example": "Untuk siswa berprestasi"
+                    },
+                    "provider": {
+                        "type": "string",
+                        "example": "Kemendikbud"
+                    },
+                    "start_date": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2025-08-01"
+                    },
+                    "end_date": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2025-12-31"
+                    },
+                    "is_active": {
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Student": {
+                "title": "Student",
+                "required": [
+                    "name",
+                    "email",
+                    "nim"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Budi"
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "budi@example.com"
+                    },
+                    "nim": {
+                        "type": "string",
+                        "example": "123456789"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "StudentScholarship": {
+                "title": "StudentScholarship",
+                "required": [
+                    "student_id",
+                    "scholarship_id"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "student_id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "scholarship_id": {
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "awarded_at": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2025-07-21"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "ApiKeyAuth": {
+                "type": "apiKey",
+                "name": "X-API-KEY",
+                "in": "header"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Scholarships",
+            "description": "Manajemen Beasiswa"
+        },
+        {
+            "name": "Students",
+            "description": "Manajemen Mahasiswa"
+        },
+        {
+            "name": "StudentScholarships",
+            "description": "Manajemen Beasiswa Mahasiswa"
+        }
+    ]
+}
