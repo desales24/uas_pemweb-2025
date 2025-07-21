@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
 use Illuminate\Support\Facades\Response;
+use App\Livewire\ShowHomePage;
 
 /* NOTE: Do Not Remove
 / Livewire asset handling if using sub folder in domain
