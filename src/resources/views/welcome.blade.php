@@ -52,31 +52,11 @@
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      <a class="btn-getstarted" href="https://uas_pemweb.test/admin">Get Started</a>
 
     </div>
   </header>
@@ -108,11 +88,7 @@
               </p>
 
               <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
-                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-link mt-2 mt-sm-0 glightbox">
-                  <i class="bi bi-play-circle me-1"></i>
-                  Play Video
-                </a>
+                <a href="https://uas_pemweb.test/admin" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
               </div>
             </div>
           </div>
@@ -121,68 +97,9 @@
             <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
               <img src="{{ asset('assets/img/illustration-1.webp') }}" alt="Hero Image" class="img-fluid">
 
-              <div class="customers-badge">
-                <div class="customer-avatars">
-                  <img src="{{ asset('assets/img/avatar-1.webp') }}" alt="Customer 1" class="avatar">
-                  <img src="{{ asset('assets/img/avatar-2.webp') }}" alt="Customer 2" class="avatar">
-                  <img src="{{ asset('assets/img/avatar-3.webp') }}" alt="Customer 3" class="avatar">
-                  <img src="{{ asset('assets/img/avatar-4.webp') }}" alt="Customer 4" class="avatar">
-                  <img src="{{ asset('assets/img/avatar-5.webp') }}" alt="Customer 5" class="avatar">
-                  <span class="avatar more">12+</span>
-                </div>
-                <p class="mb-0 mt-2">12,000+ lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-              </div>
             </div>
           </div>
         </div>
-
-        <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-trophy"></i>
-              </div>
-              <div class="stat-content">
-                <h4>3x Won Awards</h4>
-                <p class="mb-0">Vestibulum ante ipsum</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-briefcase"></i>
-              </div>
-              <div class="stat-content">
-                <h4>6.5k Faucibus</h4>
-                <p class="mb-0">Nullam quis ante</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-graph-up"></i>
-              </div>
-              <div class="stat-content">
-                <h4>80k Mauris</h4>
-                <p class="mb-0">Etiam sit amet orci</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-icon">
-                <i class="bi bi-award"></i>
-              </div>
-              <div class="stat-content">
-                <h4>6x Phasellus</h4>
-                <p class="mb-0">Vestibulum ante ipsum</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </section><!-- /Hero Section -->
@@ -245,10 +162,6 @@
               <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
                 <img src="{{ asset('assets/img/about-5.webp') }}" alt="Business Meeting" class="img-fluid main-image rounded-4">
                 <img src="{{ asset('assets/img/about-2.webp') }}" alt="Team Discussion" class="img-fluid small-image rounded-4">
-              </div>
-              <div class="experience-badge floating">
-                <h3>15+ <span>Years</span></h3>
-                <p>Of experience in business service</p>
               </div>
             </div>
           </div>
@@ -411,99 +324,6 @@
 
     <!-- Features 2 Section -->
     <section id="features-2" class="features-2 section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center">
-
-          <div class="col-lg-4">
-
-            <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="200">
-              <div class="d-flex align-items-center justify-content-end gap-4">
-                <div class="feature-content">
-                  <h3>Use On Any Device</h3>
-                  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.</p>
-                </div>
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-display"></i>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-            <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="300">
-              <div class="d-flex align-items-center justify-content-end gap-4">
-                <div class="feature-content">
-                  <h3>Feather Icons</h3>
-                  <p>Phasellus ullamcorper ipsum rutrum nunc nunc nonummy metus vestibulum volutpat sapien arcu sed augue aliquam erat volutpat.</p>
-                </div>
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-feather"></i>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-            <div class="feature-item text-end" data-aos="fade-right" data-aos-delay="400">
-              <div class="d-flex align-items-center justify-content-end gap-4">
-                <div class="feature-content">
-                  <h3>Retina Ready</h3>
-                  <p>Aenean tellus metus bibendum sed posuere ac mattis non nunc vestibulum fringilla purus sit amet fermentum aenean commodo.</p>
-                </div>
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-eye"></i>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-          </div>
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="phone-mockup text-center">
-              <img src="{{ asset('assets/img/phone-app-screen.webp') }}" alt="Phone Mockup" class="img-fluid">
-            </div>
-          </div><!-- End Phone Mockup -->
-
-          <div class="col-lg-4">
-
-            <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="200">
-              <div class="d-flex align-items-center gap-4">
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-code-square"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>W3c Valid Code</h3>
-                  <p>Donec vitae sapien ut libero venenatis faucibus nullam quis ante etiam sit amet orci eget eros faucibus tincidunt.</p>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-            <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="300">
-              <div class="d-flex align-items-center gap-4">
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-phone"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>Fully Responsive</h3>
-                  <p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet adipiscing sem neque sed ipsum.</p>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-            <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
-              <div class="d-flex align-items-center gap-4">
-                <div class="feature-icon flex-shrink-0">
-                  <i class="bi bi-browser-chrome"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>Browser Compatibility</h3>
-                  <p>Nullam dictum felis eu pede mollis pretium integer tincidunt cras dapibus vivamus elementum semper nisi aenean vulputate.</p>
-                </div>
-              </div>
-            </div><!-- End .feature-item -->
-
-          </div>
-        </div>
-
-      </div>
 
     </section><!-- /Features 2 Section -->
 
